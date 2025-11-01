@@ -400,8 +400,8 @@ function viewInterview(index) {
     // Create and show modal
     const modal = document.createElement('div');
     modal.id = 'view-modal';
-    modal.className = 'fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 p-4';
-    modal.innerHTML = `<div class="max-h-[90vh] overflow-y-auto my-8">${detailsHtml}</div>`;
+    modal.className = 'fixed inset-0 bg-gray-900 bg-opacity-75 flex items-start justify-center z-50 p-4 overflow-y-auto';
+    modal.innerHTML = `<div class="max-h-full w-full max-w-4xl my-4 sm:my-8">${detailsHtml}</div>`;
     document.body.appendChild(modal);
 }
 
