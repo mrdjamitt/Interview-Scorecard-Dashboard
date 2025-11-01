@@ -1,0 +1,134 @@
+/* Custom scrollbar styling for a cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 114, 128, 0.5); /* Gray-500 with opacity */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f3f4f6; /* Gray-100 */
+}
+
+/* Ensure the main container takes up most of the viewport height */
+#app-container {
+    min-height: 100vh;
+}
+
+
+
+/* Scorecard sections margin */
+.shadow-sm {
+    margin-bottom: 10px !important;
+}
+
+/* Additional styling for better visual hierarchy */
+.section-icon {
+    color: #6366f1; /* Indigo-500 */
+    margin-right: 0.5rem;
+}
+
+/* Hover effects for interactive elements */
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Animation for message box */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Score input styling */
+.score-input:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Table row hover effect */
+.table-row:hover {
+    background-color: #f8fafc;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 640px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+    
+    .mobile-stack {
+        display: block;
+    }
+    
+    .mobile-stack > * {
+        margin-bottom: 0.5rem;
+    }
+    
+    .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Offline indicator */
+.offline-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ef4444;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.offline-indicator.show {
+    transform: translateY(0);
+}
+
+/* Status badges */
+.status-selected {
+    background-color: #10b981;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-rejected {
+    background-color: #ef4444;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-pending {
+    background-color: #f59e0b;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
